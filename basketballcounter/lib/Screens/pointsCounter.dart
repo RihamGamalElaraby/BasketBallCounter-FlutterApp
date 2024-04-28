@@ -7,12 +7,7 @@ class PointsCounter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<CounterCubit, counterState>(
-        listener: (context, state) => {
-              // if (state is CounterAState)
-              //   {BlocProvider.of<CounterCubit>(context).counterTeamA}
-              // else
-              //   {BlocProvider.of<CounterCubit>(context).counterTeamB}
-            },
+        listener: (context, state) => {},
         builder: (context, state) {
           return Scaffold(
             appBar: AppBar(
@@ -45,6 +40,10 @@ class PointsCounter extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               fontSize: 50),
                         ),
+                        // AnimatedContainer(
+                        //     color: Colors.black,
+                        //     child: Text('add'),
+                        //     duration: Duration(seconds: 3)),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.yellow,
